@@ -131,7 +131,7 @@ function Home() {
           style={{ animation: 'floatText 3s ease-in-out infinite' }}
         >
           Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-            <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />
+            <br />  <br />  <br />  <br />  <br />  <br />  <br />  S
 
   
         </div>
