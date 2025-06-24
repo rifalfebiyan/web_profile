@@ -121,43 +121,43 @@ function Home() {
    
 
       {/* About Section */}
-      <section id="about" className="bg-light py-5">
-        <div className="container-fluid px-5">
-          <h2 className="text-center fw-bold mb-4 animate__animated animate__fadeIn">Tentang Saya</h2>
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div
-                className="fs-5 text-center animate__animated animate__fadeInUp animate__delay-1s"
-                style={{ animation: 'floatText 3s ease-in-out infinite' }}
-              >
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-                Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
-                Berpengalaman dengan React, Flask, dan pengolahan data. Fokus saya adalah menciptakan solusi digital yang impactful.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="about" className="bg-light py-5 position-relative">
+  <div className="container-fluid px-5">
+    <h2 className="text-center fw-bold mb-4 animate__animated animate__fadeIn">Tentang Saya</h2>
+    <div className="row justify-content-center">
+      <div className="col-lg-8">
+        <div
+          className="fs-5 text-center animate__animated animate__fadeInUp animate__delay-1s"
+          style={{ animation: 'floatText 3s ease-in-out infinite' }}
+        >
+          Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien.
+            <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />
 
-      {/* Wave Separator */}
-      <div style={{ marginTop: '-1px' }}>
-        <svg viewBox="0 0 1440 150" style={{ display: 'block' }}>
-          <path
-            fill="#ffffff"
-            d="M0,0 C720,120 720,120 1440,0 L1440,150 L0,150 Z"
-          />
-        </svg>
+  
+        </div>
       </div>
+    </div>
+  </div>
+
+  {/* Wave Separator bawah About */}
+  <div style={{
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    overflow: 'hidden',
+    lineHeight: 0,
+  }}>
+<svg viewBox="0 0 1440 320" preserveAspectRatio="none" style={{ display: 'block', width: '100%', height: '150px' }}>
+  <path
+    fill="#ffffff"
+    d="M0,224L48,213.3C96,203,192,181,288,165.3C384,149,480,139,576,160C672,181,768,235,864,234.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+/>
+</svg>
+  </div>
+</section>
+
+
+
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-5 bg-white">
