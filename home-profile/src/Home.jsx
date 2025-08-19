@@ -22,7 +22,20 @@ const SearchIcon = () => (
     </svg>
 );
 
-// --- NEW: Skill Icons ---
+// --- Mobile Menu Icons ---
+const MenuIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+);
+const CloseIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+);
+
+
+// --- Skill Icons ---
 const JSIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.82-2.25-2.033-3.412-1.21-1.164-2.75-2.133-4.598-2.82-1.847-.688-3.472-1.02-4.87-1.02-1.397 0-2.66.246-3.78.735-.924.398-1.75.953-2.478 1.665l1.846 1.448c.52-.54 1.112-.96 1.776-1.263.664-.303 1.39-.455 2.178-.455 1.21 0 2.243.342 3.1.927.855.585 1.52 1.345 1.995 2.28.475.935.712 2.013.712 3.234 0 1.22-.24 2.3-.72 3.24-.48.94-1.155 1.71-2.025 2.31-.87.6-1.912.9-3.12.9-1.29 0-2.43-.31-3.42-.926-.99-.616-1.8-1.4-2.42-2.34l-1.846 1.262c.81 1.29 1.87 2.286 3.18 2.988 1.31.702 2.81.977 4.51.977 1.7 0 3.2-.34 4.5-1.02.81-.39 1.5-.96 2.06-1.71.56-.75.84-1.68.84-2.79 0-1.11-.275-2.115-.825-3.015z"/></svg>;
 const ReactIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title><path d="M12.001 2.002c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zm0 18.002c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1.05-11.312c-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08zm2.1 0c-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08zM12 10.432c-.34 0-.66.08-.94.24-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08z"/></svg>;
 const LaravelIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Laravel</title><path d="M11.23 .342L.92 6.47v11.13l3.52 2.04 6.79-3.93v-4.2l-3.27-1.89v-3.58l3.27-1.92 3.27 1.92v3.58l-3.27 1.89v4.2l6.79 3.93 3.52-2.04V6.47L12.77.342a1.42 1.42 0 00-1.54 0zm1.51 16.11v3.58l-3.25 1.89-3.25-1.89v-3.58l3.25 1.92 3.25-1.92zm-3.25-5.5v3.58l-3.25-1.92v-3.58l3.25-1.89 3.25 1.89v3.58l-3.25 1.92zm0-5.5v3.58l-3.25-1.92V6.47l3.25-1.89 3.25 1.89v3.54l-3.25 1.92z"/></svg>;
@@ -79,14 +92,8 @@ const GlobalStyles = () => (
 
     /* --- Animation Keyframes & Classes --- */
     @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     
     @keyframes fadeIn {
@@ -200,13 +207,12 @@ const GlobalStyles = () => (
       color: var(--text-secondary-color);
     }
     
-    /* --- NEW: Skills Section Styles --- */
     .skills-scroller {
         overflow: hidden;
         -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
         mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        padding-bottom: 40px; /* Added to prevent skill names from being cut off */
-        margin-bottom: -40px; /* Compensates for padding to maintain original layout spacing */
+        padding-bottom: 40px;
+        margin-bottom: -40px;
     }
     .skills-track {
         display: flex;
@@ -266,7 +272,6 @@ const GlobalStyles = () => (
         from { transform: translateX(0); }
         to { transform: translateX(-50%); }
     }
-    /* --- End of Skills Section Styles --- */
 
     .projects-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
     .project-card {
@@ -324,7 +329,6 @@ const GlobalStyles = () => (
       margin-top: auto;
     }
 
-    /* --- Filter & Certificate Styles --- */
     .filter-controls {
       display: flex;
       justify-content: center;
@@ -450,9 +454,90 @@ const GlobalStyles = () => (
     .cta-button:hover svg { transform: translateX(3px) translateY(-3px); }
     
     .footer { text-align: center; padding: 4rem 2rem 2rem; color: var(--text-secondary-color); }
+    
+    /* --- UPDATED: Mobile Menu Styles --- */
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease;
+    }
+    .mobile-menu-backdrop.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-nav-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(80vw, 320px);
+        height: 100%;
+        background-color: var(--card-background);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        padding-top: 5rem;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateX(100%);
+    }
+
+    .mobile-nav-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .mobile-nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .mobile-nav-link {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-color);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .mobile-nav-sidebar.open .mobile-nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .mobile-menu-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+    }
+
 
     @media (max-width: 768px) {
       .nav-menu { display: none; }
+      .mobile-menu-toggle { display: block; }
       main { padding: 0 1.5rem; }
       .navbar { padding: 1rem 1.5rem; }
       .content-section { padding: 4rem 0; }
@@ -465,6 +550,7 @@ export default function App() {
   const [scrolled, setScrolled] = React.useState(false);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [activeFilter, setActiveFilter] = React.useState('All');
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false); // State for mobile menu
 
   // --- Scroll listener for header style ---
   React.useEffect(() => {
@@ -482,7 +568,7 @@ export default function App() {
             }
         });
     }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1
     });
 
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
@@ -490,6 +576,18 @@ export default function App() {
 
     return () => elementsToAnimate.forEach(el => observer.unobserve(el));
   }, []);
+  
+  // --- Effect to lock body scroll when mobile menu is open ---
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMenuOpen]);
 
   // --- Data ---
   const projectData = [
@@ -522,7 +620,6 @@ export default function App() {
     { title: 'Architecting on AWS', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+AWS', credentialUrl: '#' },
   ];
   
-  // --- NEW: Skills Data ---
   const skillsData = [
     { name: 'JavaScript', icon: <JSIcon /> },
     { name: 'React', icon: <ReactIcon /> },
@@ -533,14 +630,22 @@ export default function App() {
     { name: 'AWS', icon: <AWSIcon /> },
   ];
   
-  const skillsTrack1 = [...skillsData, ...skillsData]; // Duplicate for seamless loop
-  const skillsTrack2 = [...skillsData.slice(3), ...skillsData.slice(0, 3), ...skillsData.slice(3), ...skillsData.slice(0, 3)]; // Shuffled and duplicated
+  const skillsTrack1 = [...skillsData, ...skillsData];
+  const skillsTrack2 = [...skillsData.slice(3), ...skillsData.slice(0, 3), ...skillsData.slice(3), ...skillsData.slice(0, 3)];
 
   const certificateCategories = ['All', ...new Set(certificateData.map(c => c.category))];
 
   const filteredCertificates = certificateData
     .filter(cert => activeFilter === 'All' || cert.category === activeFilter)
     .filter(cert => cert.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+  const navLinks = [
+      { href: "#about", text: "Tentang" },
+      { href: "#skills", text: "Keterampilan" },
+      { href: "#portfolio", text: "Projek" },
+      { href: "#certificates", text: "Sertifikat" },
+      { href: "#contact", text: "Kontak" },
+  ];
 
   return (
     <div className="App">
@@ -554,15 +659,37 @@ export default function App() {
         <nav className="navbar">
           <a href="#" className="nav-logo">Rifal Febiyan</a>
           <ul className="nav-menu">
-            <li><a href="#about" className="nav-link">Tentang</a></li>
-            {/* NEW: Skills link added */}
-            <li><a href="#skills" className="nav-link">Keterampilan</a></li>
-            <li><a href="#portfolio" className="nav-link">Projek</a></li>
-            <li><a href="#certificates" className="nav-link">Sertifikat</a></li>
-            <li><a href="#contact" className="nav-link">Kontak</a></li>
+            {navLinks.map(link => (
+                <li key={link.href}><a href={link.href} className="nav-link">{link.text}</a></li>
+            ))}
           </ul>
+          <button className="mobile-menu-toggle" onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
+            <MenuIcon />
+          </button>
         </nav>
       </header>
+      
+      {/* --- UPDATED: Mobile Navigation Sidebar --- */}
+      <div className={`mobile-menu-backdrop ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(false)} />
+      <div className={`mobile-nav-sidebar ${isMenuOpen ? 'open' : ''}`}>
+        <button className="mobile-menu-close" onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
+            <CloseIcon />
+        </button>
+        <ul className="mobile-nav-menu">
+            {navLinks.map((link, index) => (
+                <li key={link.href}>
+                    <a 
+                        href={link.href} 
+                        className="mobile-nav-link" 
+                        onClick={() => setIsMenuOpen(false)}
+                        style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                        {link.text}
+                    </a>
+                </li>
+            ))}
+        </ul>
+      </div>
 
       <main>
         <section id="home" className="hero-section">
@@ -585,7 +712,6 @@ export default function App() {
           </div>
         </section>
         
-        {/* --- NEW: Skills Section --- */}
         <section id="skills" className="content-section">
             <h2 className="section-title animate-on-scroll fade-in-up">Keterampilan Saya</h2>
             <div className="skills-scroller animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>
