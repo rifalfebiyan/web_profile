@@ -7,7 +7,9 @@ import {
     ArrowUpRight, Search, Menu, X
 } from 'lucide-react';
 
-import { SiPython, SiGo, SiReact} from "react-icons/si";
+import { SiPython, SiGo, SiReact, SiFigma, SiJavascript, SiNodedotjs, SiTailwindcss, SiHtml5, SiBootstrap, SiJupyter, SiLaravel,
+  SiCanva, SiAdobephotoshop, 
+} from "react-icons/si";
 
 // --- Global Styles Component (No Changes) ---
 const GlobalStyles = () => (
@@ -142,7 +144,7 @@ const GlobalStyles = () => (
     .hero-content .cta-button { animation: fadeInUp 0.8s 0.8s ease-out forwards; opacity: 0; }
 
     .hero-content h1 { 
-      font-size: clamp(3rem, 6vw, 5rem); 
+      font-size: clamp(3rem, 3vw, 5rem); 
       font-weight: 700;
       margin-bottom: 1rem; 
       line-height: 1.1;
@@ -587,14 +589,23 @@ export default function App() {
   
   // --- UPDATED: Using lucide-react components for icons ---
   const skillsData = [
-    { name: 'JavaScript', icon: <Braces /> },
+    { name: 'JavaScript', icon: <SiJavascript /> },
     { name: 'React', icon: <SiReact /> },
-    { name: 'Laravel', icon: <Server /> },
-    { name: 'Go', icon: <SiGo /> },
+    { name: 'Laravel', icon: <SiLaravel /> },
+    { name: 'Golang', icon: <SiGo /> },
     { name: 'Python', icon: <SiPython /> },
-    { name: 'Figma', icon: <Figma /> },
+    { name: 'Figma', icon: <SiFigma/> },
+    { name: 'Tailwind', icon: <SiTailwindcss/> },
+    { name: 'NodeJs', icon: <SiNodedotjs/> },
+    { name: 'Tailwind', icon: <SiTailwindcss/> },
+    { name: 'HTML', icon: <SiHtml5/> },
+    { name: 'Bootstrap', icon: <SiBootstrap/> },
+    { name: 'Jupyter', icon: <SiJupyter/> },
+    { name: 'Canva', icon: <SiCanva/> },
+    { name: 'Photshop', icon: <SiAdobephotoshop/> },
 
   ];
+
   
   const skillsTrack1 = [...skillsData, ...skillsData];
   const skillsTrack2 = [...skillsData.slice(3), ...skillsData.slice(0, 3), ...skillsData.slice(3), ...skillsData.slice(0, 3)];
