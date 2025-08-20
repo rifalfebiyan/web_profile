@@ -1,51 +1,15 @@
 import React from 'react';
+// --- UPDATED: Using lucide-react for icons ---
+// To simplify the code, we're now using the 'lucide-react' library.
+// Make sure to add it to your project: npm install lucide-react
+import {
+    Github, Instagram, Facebook, Braces, Atom, Server, Container, Code, Figma, Cloud,
+    ArrowUpRight, Search, Menu, X
+} from 'lucide-react';
 
-// --- SVG Icons ---
-// No changes to existing SVG icons.
-const GitHubIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-);
-const InstagramIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-);
-const FacebookIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-);
-const ArrowIcon = () => (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.16669 12.8333L12.8334 1.16663M12.8334 1.16663H3.50002M12.8334 1.16663V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-);
-const SearchIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-    </svg>
-);
+import { SiPython, SiGo, SiReact} from "react-icons/si";
 
-// --- Mobile Menu Icons ---
-const MenuIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-);
-const CloseIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
-);
-
-
-// --- Skill Icons ---
-const JSIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.82-2.25-2.033-3.412-1.21-1.164-2.75-2.133-4.598-2.82-1.847-.688-3.472-1.02-4.87-1.02-1.397 0-2.66.246-3.78.735-.924.398-1.75.953-2.478 1.665l1.846 1.448c.52-.54 1.112-.96 1.776-1.263.664-.303 1.39-.455 2.178-.455 1.21 0 2.243.342 3.1.927.855.585 1.52 1.345 1.995 2.28.475.935.712 2.013.712 3.234 0 1.22-.24 2.3-.72 3.24-.48.94-1.155 1.71-2.025 2.31-.87.6-1.912.9-3.12.9-1.29 0-2.43-.31-3.42-.926-.99-.616-1.8-1.4-2.42-2.34l-1.846 1.262c.81 1.29 1.87 2.286 3.18 2.988 1.31.702 2.81.977 4.51.977 1.7 0 3.2-.34 4.5-1.02.81-.39 1.5-.96 2.06-1.71.56-.75.84-1.68.84-2.79 0-1.11-.275-2.115-.825-3.015z"/></svg>;
-const ReactIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title><path d="M12.001 2.002c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zm0 18.002c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1.05-11.312c-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08zm2.1 0c-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08zM12 10.432c-.34 0-.66.08-.94.24-.28.16-.48.46-.56.79l-.54 2.16c-.08.33.04.68.32.88.28.2.66.16.9-.08.24-.24.32-.6.2-.92l.52-2.08c.08-.33-.04-.68-.32-.88s-.66-.16-.9.08z"/></svg>;
-const LaravelIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Laravel</title><path d="M11.23 .342L.92 6.47v11.13l3.52 2.04 6.79-3.93v-4.2l-3.27-1.89v-3.58l3.27-1.92 3.27 1.92v3.58l-3.27 1.89v4.2l6.79 3.93 3.52-2.04V6.47L12.77.342a1.42 1.42 0 00-1.54 0zm1.51 16.11v3.58l-3.25 1.89-3.25-1.89v-3.58l3.25 1.92 3.25-1.92zm-3.25-5.5v3.58l-3.25-1.92v-3.58l3.25-1.89 3.25 1.89v3.58l-3.25 1.92zm0-5.5v3.58l-3.25-1.92V6.47l3.25-1.89 3.25 1.89v3.54l-3.25 1.92z"/></svg>;
-const GoIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Go</title><path d="M21.12 11.16a1.08 1.08 0 00-.48-.48l-4.2-2.52a1.08 1.08 0 00-1.08 0l-1.92 1.2-3.36-2.04a1.08 1.08 0 00-1.08 0L3.36 9.84a1.08 1.08 0 00-.6.96v5.28c0 .48.24.84.6.96l5.64 3.36a1.08 1.08 0 001.08 0l1.92-1.2 3.36 2.04a1.08 1.08 0 001.08 0l5.64-3.36a1.08 1.08 0 00.6-.96v-5.28a1.08 1.08 0 00-.12-.48zm-5.16 3.96l-3.36 2.04-5.64-3.36V9.84l3.36-2.04 5.64 3.36v4.92z"/></svg>;
-const PythonIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M11.25 21.25a2.5 2.5 0 002.5-2.5V15h2.5a2.5 2.5 0 002.5-2.5V10h-2.5a2.5 2.5 0 01-2.5-2.5V5h-2.5a2.5 2.5 0 01-2.5-2.5H8.75A2.5 2.5 0 006.25 5v3.75H5a2.5 2.5 0 00-2.5 2.5v2.5h2.5a2.5 2.5 0 012.5 2.5v2.5h2.5a2.5 2.5 0 012.5 2.5z"/></svg>;
-const FigmaIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Figma</title><path d="M12 2.5a2.5 2.5 0 00-2.5 2.5v5A2.5 2.5 0 0012 12.5h2.5a2.5 2.5 0 002.5-2.5v-5A2.5 2.5 0 0014.5 2.5h-2.5zm0 7.5a2.5 2.5 0 00-2.5 2.5v5a2.5 2.5 0 002.5 2.5h2.5a2.5 2.5 0 002.5-2.5v-5a2.5 2.5 0 00-2.5-2.5h-2.5zM9.5 7.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM7 12.5a2.5 2.5 0 012.5-2.5h2.5a2.5 2.5 0 010 5H9.5a2.5 2.5 0 01-2.5-2.5zm2.5 5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>;
-const AWSIcon = () => <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Amazon AWS</title><path d="M11.25 2.5a2.5 2.5 0 00-2.5 2.5v2.5h-2.5a2.5 2.5 0 00-2.5 2.5v2.5h2.5a2.5 2.5 0 012.5 2.5v2.5h2.5a2.5 2.5 0 012.5 2.5h2.5a2.5 2.5 0 002.5-2.5V15h2.5a2.5 2.5 0 002.5-2.5V10h-2.5a2.5 2.5 0 01-2.5-2.5V5h-2.5a2.5 2.5 0 01-2.5-2.5z"/></svg>;
-
-
-// --- Global Styles Component ---
+// --- Global Styles Component (No Changes) ---
 const GlobalStyles = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -239,7 +203,7 @@ const GlobalStyles = () => (
     .skill-item svg {
         width: 48px;
         height: 48px;
-        fill: var(--text-secondary-color);
+        color: var(--text-secondary-color);
         transition: all 0.3s ease;
     }
     .skill-item .skill-name {
@@ -260,7 +224,7 @@ const GlobalStyles = () => (
         border-color: var(--primary-color);
     }
     .skill-item:hover svg {
-        fill: var(--primary-color);
+        color: var(--primary-color);
         transform: scale(1.1);
     }
     .skill-item:hover .skill-name {
@@ -427,6 +391,7 @@ const GlobalStyles = () => (
     .contact-container p { color: var(--text-secondary-color); margin: 1rem auto 2rem; max-width: 500px; }
     .social-links { display: flex; justify-content: center; gap: 1.5rem; }
     .social-links a { color: var(--text-secondary-color); transition: color 0.3s ease, transform 0.3s ease; }
+    /* The size of social icons is now controlled by width/height props in JSX */
     .social-links a:hover { color: var(--primary-color); transform: scale(1.2) rotate(5deg); }
 
     .cta-button {
@@ -455,7 +420,7 @@ const GlobalStyles = () => (
     
     .footer { text-align: center; padding: 4rem 2rem 2rem; color: var(--text-secondary-color); }
     
-    /* --- UPDATED: Mobile Menu Styles --- */
+    /* --- Mobile Menu Styles --- */
     .mobile-menu-toggle {
         display: none;
         background: none;
@@ -550,7 +515,7 @@ export default function App() {
   const [scrolled, setScrolled] = React.useState(false);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [activeFilter, setActiveFilter] = React.useState('All');
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false); // State for mobile menu
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   // --- Scroll listener for header style ---
   React.useEffect(() => {
@@ -620,14 +585,15 @@ export default function App() {
     { title: 'Architecting on AWS', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+AWS', credentialUrl: '#' },
   ];
   
+  // --- UPDATED: Using lucide-react components for icons ---
   const skillsData = [
-    { name: 'JavaScript', icon: <JSIcon /> },
-    { name: 'React', icon: <ReactIcon /> },
-    { name: 'Laravel', icon: <LaravelIcon /> },
-    { name: 'Go', icon: <GoIcon /> },
-    { name: 'Python', icon: <PythonIcon /> },
-    { name: 'Figma', icon: <FigmaIcon /> },
-    { name: 'AWS', icon: <AWSIcon /> },
+    { name: 'JavaScript', icon: <Braces /> },
+    { name: 'React', icon: <SiReact /> },
+    { name: 'Laravel', icon: <Server /> },
+    { name: 'Go', icon: <SiGo /> },
+    { name: 'Python', icon: <SiPython /> },
+    { name: 'Figma', icon: <Figma /> },
+
   ];
   
   const skillsTrack1 = [...skillsData, ...skillsData];
@@ -664,16 +630,15 @@ export default function App() {
             ))}
           </ul>
           <button className="mobile-menu-toggle" onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
-            <MenuIcon />
+            <Menu />
           </button>
         </nav>
       </header>
       
-      {/* --- UPDATED: Mobile Navigation Sidebar --- */}
       <div className={`mobile-menu-backdrop ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(false)} />
       <div className={`mobile-nav-sidebar ${isMenuOpen ? 'open' : ''}`}>
         <button className="mobile-menu-close" onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
-            <CloseIcon />
+            <X />
         </button>
         <ul className="mobile-nav-menu">
             {navLinks.map((link, index) => (
@@ -694,11 +659,11 @@ export default function App() {
       <main>
         <section id="home" className="hero-section">
           <div className="hero-content">
-            <img src="https://placehold.co/120x120/181818/E4E4E7?text=RF" alt="Profile" className="profile-img" />
+            <img src="./profile2.jpg" alt="Profile" className="profile-img" />
             <h1>Halo, saya Rifal Febiyan</h1>
             <p className="hero-subtitle">Seorang Web Developer yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
             <a href="#contact" className="cta-button">
-              Kontak Saya <ArrowIcon />
+              Kontak Saya <ArrowUpRight size={16} />
             </a>
           </div>
         </section>
@@ -759,7 +724,7 @@ export default function App() {
           <h2 className="section-title">Sertifikat & Lisensi</h2>
           <div className="filter-controls">
             <div className="search-container">
-              <span className="search-icon"><SearchIcon /></span>
+              <span className="search-icon"><Search size={16} /></span>
               <input
                 type="text"
                 className="search-input"
@@ -798,9 +763,9 @@ export default function App() {
             <h2 className="section-title animate-on-scroll fade-in-up">Hubungi Saya</h2>
             <p className="animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya melalui media sosial.</p>
             <div className="social-links animate-on-scroll fade-in-up" style={{transitionDelay: '400ms'}}>
-              <a href="https://github.com/rifalfebiyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GitHubIcon /></a>
-              <a href="#" aria-label="Instagram"><InstagramIcon /></a>
-              <a href="#" aria-label="Facebook"><FacebookIcon /></a>
+              <a href="https://github.com/rifalfebiyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={24} /></a>
+              <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
+              <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
             </div>
           </div>
         </section>
