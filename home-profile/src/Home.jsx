@@ -594,6 +594,9 @@ export default function App() {
     // Data Analyst
     { title: 'Basic Feature Discovering for Machine Learning', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_1.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABFATPYQPOWOS' },
     
+    { title: 'Data Science Project: Analisis Data COVID19 di Dunia & ASEAN', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_2.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1OMCKAD' },
+
+    
     // UI/UX
     { title: 'UI/UX Design Mastery', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+UI/UX', credentialUrl: '#' },
     { title: 'Cloud Practitioner Essentials', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Cloud', credentialUrl: '#' },
@@ -732,30 +735,7 @@ export default function App() {
             </div>
         </section>
 
-        <section id="portfolio" className="content-section">
-          <h2 className="section-title animate-on-scroll fade-in-up">Rekam Jejak</h2>
-          <div className="projects-grid">
-            {projectData.map((item, index) => (
-              <div key={index} className="project-card animate-on-scroll fade-in-up" style={{transitionDelay: `${index * 150}ms`}}>
-                <img src={item.image} alt={item.title} className="project-image" />
-                <div className="project-content">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div className="project-tags">
-                    {item.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-                  </div>
-                  <div className="project-links">
-                      <a href={item.livePreviewUrl} className="cta-button" target="_blank" rel="noopener noreferrer">Live Preview</a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        
-
-         <section id="certificates" className="content-section">
+        <section id="certificates" className="content-section">
           <h2 className="section-title">Sertifikat & Lisensi</h2>
           <div className="filter-controls">
             <div className="search-container">
@@ -792,6 +772,31 @@ export default function App() {
             ))}
           </div>
         </section>
+
+        <section id="portfolio" className="content-section">
+          <h2 className="section-title animate-on-scroll fade-in-up">Rekam Jejak</h2>
+          <div className="projects-grid">
+            {projectData.map((item, index) => (
+              <div key={index} className="project-card animate-on-scroll fade-in-up" style={{transitionDelay: `${index * 150}ms`}}>
+                <img src={item.image} alt={item.title} className="project-image" />
+                <div className="project-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="project-tags">
+                    {item.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+                  </div>
+                  <div className="project-links">
+                      <a href={item.livePreviewUrl} className="cta-button" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        
+
+         
 
         <section id="contact" className="content-section">
           <div className="contact-container">
