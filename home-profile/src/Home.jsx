@@ -571,9 +571,10 @@ export default function App() {
       title: 'PT. Binco Nusantara', 
       description: '',
       tags: ['UI/UX Design', 'React', 'Vite'],
-      image: './img/portfolio/portofolio9.png'
+      image: './img/portfolio/portofolio7.png',
+      livePreviewUrl: 'https://bincorannusantara.id/'
+     
     },
-
     { 
       title: 'Website Laundry', 
       description: 'Desain website UMKM dengan UI responsif dan visual yang bersih, dibangun untuk meningkatkan kehadiran digital dan memudahkan pelanggan.',
@@ -584,7 +585,8 @@ export default function App() {
       title: 'E-GuestBook DISKOMINFO DIY', 
       description: 'It is expected that this solution will not only improve efficiency but also simplify the institutions process of managing and analyzing the required data, enabling public services at Diskominfo DIY to continue evolving in line with the demands of digitalization.',
       tags: ['React', 'Bootstrap', 'Data Management','Golang'],
-      image: './img/portfolio/portfolio6.png'
+      image: './img/portfolio/portfolio6.png',
+      livePreviewUrl: 'https://github.com/rifalfebiyan/E-GuestBook-Diskominfo-DIY'
     },
   ];
 
@@ -690,7 +692,7 @@ export default function App() {
       <main>
         <section id="home" className="hero-section">
           <div className="hero-content">
-            <img src="./profile2.jpg" alt="Profile" className="profile-img" />
+            <img src="./profile3.png" alt="Profile" className="profile-img" />
             <h1>Rifal Febiyan</h1>
             <p className="hero-subtitle">Seorang Web Developer & Data Analyst yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
             <a href="#contact" className="cta-button">
@@ -731,7 +733,7 @@ export default function App() {
         </section>
 
         <section id="portfolio" className="content-section">
-          <h2 className="section-title animate-on-scroll fade-in-up">Projek Pilihan</h2>
+          <h2 className="section-title animate-on-scroll fade-in-up">Rekam Jejak</h2>
           <div className="projects-grid">
             {projectData.map((item, index) => (
               <div key={index} className="project-card animate-on-scroll fade-in-up" style={{transitionDelay: `${index * 150}ms`}}>
@@ -743,13 +745,15 @@ export default function App() {
                     {item.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
                   </div>
                   <div className="project-links">
-                      <a href="#" className="cta-button">Live Preview</a>
+                      <a href={item.livePreviewUrl} className="cta-button" target="_blank" rel="noopener noreferrer">Live Preview</a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
+
+        
 
          <section id="certificates" className="content-section">
           <h2 className="section-title">Sertifikat & Lisensi</h2>
