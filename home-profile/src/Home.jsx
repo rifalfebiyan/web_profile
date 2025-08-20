@@ -593,10 +593,15 @@ export default function App() {
   const certificateData = [
     // Data Analyst
     { title: 'Basic Feature Discovering for Machine Learning', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_1.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABFATPYQPOWOS' },
-    
     { title: 'Data Science Project: Analisis Data COVID19 di Dunia & ASEAN', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_2.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1OMCKAD' },
-
+    { title: 'Data Science in Marketing : Customer Segmentation with Python - Part 1', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_3.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABDSCS1SVHKGN' },
+    { title: 'Data Science in Marketing : Customer Segmentation with Python - Part 2', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_4.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABDSCS1MRNQNM' },
     
+    { title: 'Data Science in Telco: Data Cleansing', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_5.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABAPL1MLNLQJ' },
+    { title: 'Mengenal Model Regresi Linear Pada Python', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_6.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABMDNP1TWNNQS' },
+
+
+
     // UI/UX
     { title: 'UI/UX Design Mastery', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+UI/UX', credentialUrl: '#' },
     { title: 'Cloud Practitioner Essentials', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Cloud', credentialUrl: '#' },
