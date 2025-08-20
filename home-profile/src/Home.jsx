@@ -144,7 +144,7 @@ const GlobalStyles = () => (
     .hero-content .cta-button { animation: fadeInUp 0.8s 0.8s ease-out forwards; opacity: 0; }
 
     .hero-content h1 { 
-      font-size: clamp(3rem, 3vw, 5rem); 
+      font-size: clamp(3rem, 6vw, 5rem); 
       font-weight: 700;
       margin-bottom: 1rem; 
       line-height: 1.1;
@@ -579,12 +579,22 @@ export default function App() {
   ];
 
   const certificateData = [
-    { title: 'Basic Feature Discovering for Machine Learning', issuer: 'DQLab', category: 'Data Analyst', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+ML', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABFATPYQPOWOS' },
+    // Data Analyst
+    { title: 'Basic Feature Discovering for Machine Learning', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_1.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABFATPYQPOWOS' },
+    
+    // UI/UX
     { title: 'UI/UX Design Mastery', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+UI/UX', credentialUrl: '#' },
     { title: 'Cloud Practitioner Essentials', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Cloud', credentialUrl: '#' },
+    
+    // Web Development
     { title: 'Belajar JavaScript Lanjutan', issuer: 'Dicoding', category: 'Web Development', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+JS', credentialUrl: '#' },
+    
+    // Internship
     { title: 'Figma for UI Design', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Figma', credentialUrl: '#' },
     { title: 'Architecting on AWS', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+AWS', credentialUrl: '#' },
+  
+  // Digital Marketing
+    { title: 'Pemasaran Digital Dasar Digital Entrepreuneurship Academy Digital Talent Scholarship 2023', issuer: 'Digitalent BBPTIK Cikarang', category: 'Digital Marketing', image: './img/certified/Certif1.png', credentialUrl: '#' },
   ];
   
   // --- UPDATED: Using lucide-react components for icons ---
@@ -671,8 +681,8 @@ export default function App() {
         <section id="home" className="hero-section">
           <div className="hero-content">
             <img src="./profile2.jpg" alt="Profile" className="profile-img" />
-            <h1>Hi, I'm Rifal Febiyan</h1>
-            <p className="hero-subtitle">Seorang Web Developer yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
+            <h1>Rifal Febiyan</h1>
+            <p className="hero-subtitle">Seorang Web Developer & Data Analyst yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
             <a href="#contact" className="cta-button">
               Kontak Saya <ArrowUpRight size={16} />
             </a>
