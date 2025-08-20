@@ -565,10 +565,10 @@ export default function App() {
       image: './img/portfolio/portofolio9.png'
     },
     { 
-      title: 'Dashboard Hotel', 
-      description: 'Sistem manajemen tamu hotel dengan React dan Bootstrap. Fitur utama termasuk manajemen booking dan ekspor data ke Excel.',
-      tags: ['React', 'Bootstrap', 'Data Management'],
-      image: 'https://placehold.co/600x400/181818/BEF264?text=Projek+Hotel'
+      title: 'E-GuestBook DISKOMINFO DIY', 
+      description: 'It is expected that this solution will not only improve efficiency but also simplify the institutions process of managing and analyzing the required data, enabling public services at Diskominfo DIY to continue evolving in line with the demands of digitalization.',
+      tags: ['React', 'Bootstrap', 'Data Management','Golang'],
+      image: './img/portfolio/portfolio6.png'
     },
     { 
       title: 'AI Translator', 
