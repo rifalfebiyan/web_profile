@@ -562,7 +562,7 @@ export default function App() {
       title: 'Website Laundry', 
       description: 'Desain website UMKM dengan UI responsif dan visual yang bersih, dibangun untuk meningkatkan kehadiran digital dan memudahkan pelanggan.',
       tags: ['UI/UX Design', 'React', 'Vite'],
-      image: 'https://placehold.co/600x400/181818/BEF264?text=Projek+Laundry'
+      image: './img/portfolio/portofolio9.png'
     },
     { 
       title: 'Dashboard Hotel', 
