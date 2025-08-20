@@ -660,7 +660,7 @@ export default function App() {
         <section id="home" className="hero-section">
           <div className="hero-content">
             <img src="./profile2.jpg" alt="Profile" className="profile-img" />
-            <h1>Halo, saya Rifal Febiyan</h1>
+            <h1>Hi, I'm Rifal Febiyan</h1>
             <p className="hero-subtitle">Seorang Web Developer yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
             <a href="#contact" className="cta-button">
               Kontak Saya <ArrowUpRight size={16} />
