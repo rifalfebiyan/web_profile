@@ -253,11 +253,20 @@ const GlobalStyles = () => (
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); 
     }
-    .project-image {
+    .project-image-container {
       width: 100%;
       height: 300px;
-      object-fit: cover;
+      background-color: var(--background-color); /* Added background for letterboxing */
       border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* MODIFIED: Changed from 'cover' to 'contain' */
     }
     .project-content {
       padding: 1.5rem;
@@ -559,6 +568,13 @@ export default function App() {
   // --- Data ---
   const projectData = [
     { 
+      title: 'PT. Binco Nusantara', 
+      description: '',
+      tags: ['UI/UX Design', 'React', 'Vite'],
+      image: './img/portfolio/portofolio9.png'
+    },
+
+    { 
       title: 'Website Laundry', 
       description: 'Desain website UMKM dengan UI responsif dan visual yang bersih, dibangun untuk meningkatkan kehadiran digital dan memudahkan pelanggan.',
       tags: ['UI/UX Design', 'React', 'Vite'],
@@ -569,12 +585,6 @@ export default function App() {
       description: 'It is expected that this solution will not only improve efficiency but also simplify the institutions process of managing and analyzing the required data, enabling public services at Diskominfo DIY to continue evolving in line with the demands of digitalization.',
       tags: ['React', 'Bootstrap', 'Data Management','Golang'],
       image: './img/portfolio/portfolio6.png'
-    },
-    { 
-      title: 'AI Translator', 
-      description: 'Aplikasi pembelajaran bahasa asing untuk anak-anak berbasis Flask, menggunakan teknologi AI untuk terjemahan interaktif.',
-      tags: ['Python', 'Flask', 'AI/ML'],
-      image: 'https://placehold.co/600x400/181818/BEF264?text=Projek+AI'
     },
   ];
 
