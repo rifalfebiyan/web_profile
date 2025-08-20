@@ -596,25 +596,29 @@ export default function App() {
     { title: 'Data Science Project: Analisis Data COVID19 di Dunia & ASEAN', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_2.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1OMCKAD' },
     { title: 'Data Science in Marketing : Customer Segmentation with Python - Part 1', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_3.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABDSCS1SVHKGN' },
     { title: 'Data Science in Marketing : Customer Segmentation with Python - Part 2', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_4.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABDSCS1MRNQNM' },
-    
     { title: 'Data Science in Telco: Data Cleansing', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_5.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABAPL1MLNLQJ' },
     { title: 'Mengenal Model Regresi Linear Pada Python', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_6.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABMDNP1TWNNQS' },
+    { title: 'Python Fundamental for Data Science', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_7.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1LPVJTB' },
+    { title: 'Python for Data Professional Beginner - Part 1', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_8.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1FNVCAF' },
+    { title: 'Intro to Data Analytics', issuer: 'Revou', category: 'Data Analyst', image: './img/certified/sertifikat_9.jpg', credentialUrl: '#' },
+    { title: 'Intro to Data Science Free Course', issuer: 'Thrive With Purwadhika', category: 'Data Analyst', image: './img/certified/sertifikat_10.jpg', credentialUrl: 'https://purwadhika.com/verify-certificate/PWDK-ITDSFC-250819-0000004' },
 
-
-
+    // Internship
+    { title: 'Dinas Komunikasi dan Informatika Daerah Istimewa Yogyakarta Intershihp', issuer: 'DISKOMINFO DIY', category: 'Experience', image: './img/certified/sertifikat_15.jpg', credentialUrl: '#' },
+    { title: 'Koordinator & Asisten Praktikum', issuer: 'Labolatorium S-1 Informatika UAD', category: 'Experience', image: './img/certified/sertifikat_16.jpg', credentialUrl: '#' },
+    { title: 'Trainer Optimalisasi Sosial Media dan Desain Grafis untuk Media Promosi Sekolah dan Konten Pembelajaran SD/MI Muhammadiyah/Aisyiyah Kabupaten Bantul', issuer: 'PPM BKS Bantul', category: 'Experience', image: './img/certified/sertifikat_17.jpg', credentialUrl: '#' },
     // UI/UX
-    { title: 'UI/UX Design Mastery', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+UI/UX', credentialUrl: '#' },
-    { title: 'Cloud Practitioner Essentials', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Cloud', credentialUrl: '#' },
+    { title: 'Kickstart UI/UX Design Journey', issuer: 'Rakamin Academy', category: 'UI/UX', image: './img/certified/sertifikat_11.jpg', credentialUrl: '#' },
     
     // Web Development
-    { title: 'Belajar JavaScript Lanjutan', issuer: 'Dicoding', category: 'Web Development', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+JS', credentialUrl: '#' },
+    { title: 'Intro to Full Stack Web Development Free Course', issuer: 'Thrive With Purwadhika', category: 'Web Development', image: './img/certified/sertifikat_12.jpg', credentialUrl: 'https://purwadhika.com/verify-certificate/PWDK-ITFSWDFC-250819-0000003' },
+    { title: 'Pemrograman (Micro Skill)', issuer: 'Digital Talent Scholarship', category: 'Web Development', image: './img/certified/sertifikat_13.jpg', credentialUrl: 'https://www.linkedin.com/in/rifal-febiyan-b7805417a/details/certifications/1755681404364/single-media-viewer/?profileId=ACoAACpdlowB81ZfxZiyKBRqXf8BsqDq9QXr74s' },
     
-    // Internship
-    { title: 'Figma for UI Design', issuer: 'Skilvul', category: 'UI/UX', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+Figma', credentialUrl: '#' },
-    { title: 'Architecting on AWS', issuer: 'AWS', category: 'Cloud', image: 'https://placehold.co/400x300/181818/BEF264?text=Sertifikat+AWS', credentialUrl: '#' },
-  
-  // Digital Marketing
+    // Digital Marketing
     { title: 'Pemasaran Digital Dasar Digital Entrepreuneurship Academy Digital Talent Scholarship 2023', issuer: 'Digitalent BBPTIK Cikarang', category: 'Digital Marketing', image: './img/certified/Certif1.png', credentialUrl: '#' },
+  
+    // Additional Certificates
+    { title: 'Modul Pengembangan Konten Promosi Sekolah dan Konten Pembelajaran dengan Canva', issuer: 'Direktorat Jenderal Kekayaan Intelektual', category: 'Additional', image: './img/certified/sertifikat_14.jpg', credentialUrl: 'https://pdki-indonesia.dgip.go.id/detail/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' },
   ];
   
   // --- UPDATED: Using lucide-react components for icons ---
