@@ -4,11 +4,11 @@ import React from 'react';
 // Make sure to add it to your project: npm install lucide-react
 import {
     Github, Instagram, Facebook, Braces, Atom, Server, Container, Code, Figma, Cloud,
-    ArrowUpRight, Search, Menu, X
+    ArrowUpRight, Search, Menu, X, Linkedin
 } from 'lucide-react';
 
 import { SiPython, SiGo, SiReact, SiFigma, SiJavascript, SiNodedotjs, SiTailwindcss, SiHtml5, SiBootstrap, SiJupyter, SiLaravel,
-  SiCanva, SiAdobephotoshop, 
+  SiCanva, SiAdobephotoshop, SiWhatsapp,
 } from "react-icons/si";
 
 // --- Global Styles Component (No Changes) ---
@@ -653,8 +653,8 @@ export default function App() {
   const navLinks = [
       { href: "#about", text: "Tentang" },
       { href: "#skills", text: "Keterampilan" },
-      { href: "#portfolio", text: "Projek" },
       { href: "#certificates", text: "Sertifikat" },
+      { href: "#portfolio", text: "Projek" },
       { href: "#contact", text: "Kontak" },
   ];
 
@@ -717,7 +717,12 @@ export default function App() {
           <h2 className="section-title animate-on-scroll fade-in-up">Tentang Saya</h2>
           <div className="about-container animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>
             <p>
-              Saya seorang pengembang web yang menyukai desain elegan dan aplikasi efisien. Dengan latar belakang yang kuat dalam pengembangan antarmuka pengguna (UI) dan analisis data, saya bersemangat untuk menciptakan pengalaman digital yang intuitif dan berdampak. Mari kita berkolaborasi untuk mewujudkan ide-ide Anda!
+              Lulusan Program Studi Informatika yang bercita-cita tinggi dan antusias terhadap perkembangan teknologi digital. 
+              Memiliki keahlian dalam pengembangan web, digitalisasi, serta bidang kecerdasan buatan seperti data mining, machine 
+              learning, dan deep learning. Mahir dalam analisis dan pengelolaan data menggunakan bahasa pemrograman Python. 
+              Berpengalaman dalam berbagai kegiatan organisasi yang telah membentuk keterampilan komunikasi, jurnalistik, 
+              kreativitas digital, administrasi data, manajemen, kepemimpinan, dan kolaborasi tim untuk mendukung transformasi 
+              digital. 
             </p>
           </div>
         </section>
@@ -813,8 +818,10 @@ export default function App() {
             <p className="animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya melalui media sosial.</p>
             <div className="social-links animate-on-scroll fade-in-up" style={{transitionDelay: '400ms'}}>
               <a href="https://github.com/rifalfebiyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={24} /></a>
-              <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
-              <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
+              <a href="https://www.instagram.com/rifal_febiyan" aria-label="Instagram"><Instagram size={24} /></a>
+              <a href="https://web.facebook.com/rifal.febiyan" aria-label="Facebook"><Facebook size={24} /></a>
+              <a href="https://www.linkedin.com/in/rifal-febiyan-b7805417a/" aria-label="Linkedin"><Linkedin size={24} /></a>
+              <a href="https://wa.me/628978643225" aria-label="WhatsApp"><SiWhatsapp size={24} /></a>
             </div>
           </div>
         </section>
