@@ -576,10 +576,11 @@ export default function App() {
      
     },
     { 
-      title: 'Website Laundry', 
-      description: 'Desain website UMKM dengan UI responsif dan visual yang bersih, dibangun untuk meningkatkan kehadiran digital dan memudahkan pelanggan.',
+      title: 'Web Profile Program Studi Magister Pendidikan Guru Vokasi', 
+      description: '',
       tags: ['UI/UX Design', 'React', 'Vite'],
-      image: './img/portfolio/portofolio9.png'
+      image: './img/portfolio/portofolio12.jpg',
+      livePreviewUrl: 'https://mpgv.uad.ac.id/'
     },
     { 
       title: 'E-GuestBook DISKOMINFO DIY', 
@@ -587,6 +588,12 @@ export default function App() {
       tags: ['React', 'Bootstrap', 'Data Management','Golang'],
       image: './img/portfolio/portfolio6.png',
       livePreviewUrl: 'https://github.com/rifalfebiyan/E-GuestBook-Diskominfo-DIY'
+    },
+     { 
+      title: 'Website Laundry', 
+      description: 'Desain website UMKM dengan UI responsif dan visual yang bersih, dibangun untuk meningkatkan kehadiran digital dan memudahkan pelanggan.',
+      tags: ['UI/UX Design', 'React', 'Vite'],
+      image: './img/portfolio/portofolio9.png'
     },
   ];
 
@@ -808,10 +815,7 @@ export default function App() {
           </div>
         </section>
 
-        
-
-         
-
+          {/* Footer */}
         <section id="contact" className="content-section">
           <div className="contact-container">
             <h2 className="section-title animate-on-scroll fade-in-up">Hubungi Saya</h2>
