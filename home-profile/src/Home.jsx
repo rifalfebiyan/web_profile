@@ -578,7 +578,7 @@ export default function App() {
     { 
       title: 'Web Profile Program Studi Magister Pendidikan Guru Vokasi', 
       description: '',
-      tags: ['UI/UX Design', 'React', 'Vite'],
+      tags: ['UI/UX Design', 'Wordpress'],
       image: './img/portfolio/portofolio12.jpg',
       livePreviewUrl: 'https://mpgv.uad.ac.id/'
     },
@@ -588,6 +588,13 @@ export default function App() {
       tags: ['React', 'Bootstrap', 'Data Management','Golang'],
       image: './img/portfolio/portfolio6.png',
       livePreviewUrl: 'https://github.com/rifalfebiyan/E-GuestBook-Diskominfo-DIY'
+    },
+    { 
+      title: 'Website Portofolio', 
+      description: '',
+      tags: ['Tailwind','HTML', 'CSS', 'JavaScript'],
+      image: './img/portfolio/portofolio13.jpg',
+      livePreviewUrl: 'https://rifalfebiyan.github.io/portfolio/'
     },
      { 
       title: 'Website Laundry', 
