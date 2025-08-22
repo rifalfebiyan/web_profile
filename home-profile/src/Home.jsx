@@ -576,7 +576,7 @@ export default function App() {
      
     },
     { 
-      title: 'Web Profile Program Studi Magister Pendidikan Guru Vokasi', 
+      title: 'Web Profile Program Studi Magister Pendidikan Guru Vokasi UAD', 
       description: '',
       tags: ['UI/UX Design', 'Wordpress'],
       image: './img/portfolio/portofolio12.jpg',
@@ -595,6 +595,14 @@ export default function App() {
       tags: ['Tailwind','HTML', 'CSS', 'JavaScript'],
       image: './img/portfolio/portofolio13.jpg',
       livePreviewUrl: 'https://rifalfebiyan.github.io/portfolio/'
+    },
+     { 
+      title: 'Website School Profile', 
+      description: '',
+      tags: ['UI/UX Design', 'HTML', 'CSS', 'JavaScript'],
+      image: './img/portfolio/portofolio10.png',
+      livePreviewUrl: 'https://replit.com/@rifalfebiyan/We-Who-Remains-Responsive#index.html'
+      
     },
      { 
       title: 'Website Laundry', 
