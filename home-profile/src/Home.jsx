@@ -567,6 +567,14 @@ export default function App() {
 
   // --- Data ---
   const projectData = [
+      { 
+      title: 'Bakso Mercon Pak Abi', 
+      description: '',
+      tags: ['UI/UX Design', 'React', 'Vite'],
+      image: './img/portfolio/portofolio14.jpg',
+      livePreviewUrl: 'https://baksopakabi.vercel.app/'
+     
+    },
     { 
       title: 'PT. Binco Nusantara', 
       description: '',
@@ -613,6 +621,9 @@ export default function App() {
   ];
 
   const certificateData = [
+
+    // Web Development
+    { title: 'Wordpress Introduction', issuer: 'MySkill', category: 'Web Development', image: './img/certified/sertifikat_18.jpg', credentialUrl: 'https://docs.google.com/spreadsheets/d/1ADAenZXwkp5W8FJE8S2QfV7Bfp7Hlb6gmd3L5Wl-vmY/edit?gid=0#gid=0' },
     // Data Analyst
     { title: 'Basic Feature Discovering for Machine Learning', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_1.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABFATPYQPOWOS' },
     { title: 'Data Science Project: Analisis Data COVID19 di Dunia & ASEAN', issuer: 'DQLab', category: 'Data Analyst', image: './img/certified/sertifikat_2.jpg', credentialUrl: 'https://academy.dqlab.id/Certificate_check/result/DQLABINTP1OMCKAD' },
