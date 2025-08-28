@@ -593,7 +593,7 @@ export default function App() {
     { 
       title: 'E-GuestBook DISKOMINFO DIY', 
       description: 'It is expected that this solution will not only improve efficiency but also simplify the institutions process of managing and analyzing the required data, enabling public services at Diskominfo DIY to continue evolving in line with the demands of digitalization.',
-      tags: ['React', 'Bootstrap', 'Data Management','Golang'],
+      tags: ['React', 'Bootstrap', 'Data Management','Golang','MySQL'],
       image: './img/portfolio/portfolio6.png',
       livePreviewUrl: 'https://github.com/rifalfebiyan/E-GuestBook-Diskominfo-DIY'
     },
