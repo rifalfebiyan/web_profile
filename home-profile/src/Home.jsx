@@ -630,7 +630,7 @@ export default function App() {
 
   const certificateData = [
 
-
+    { title: 'Copywriting AI Untuk Iklan Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_20.jpg', credentialUrl: '' },
     { title: 'Social Media Management untuk Brand Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_19.jpg', credentialUrl: '' },
     // Web Development
     { title: 'Wordpress Introduction', issuer: 'MySkill', category: 'Web Development', image: './img/certified/sertifikat_18.jpg', credentialUrl: 'https://docs.google.com/spreadsheets/d/1ADAenZXwkp5W8FJE8S2QfV7Bfp7Hlb6gmd3L5Wl-vmY/edit?gid=0#gid=0' },
