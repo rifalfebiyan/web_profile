@@ -578,7 +578,7 @@ export default function App() {
        { 
       title: 'Researcher in Data Science', 
       description: '',
-      tags: ['Python','Jupyter','Data Analysis', 'Data Visualization', ''  ],
+      tags: ['Python','Jupyter','Data Analysis', 'Data Visualization', 'Association Rule','Data Mining','Machine Learning'],
       image: './img/portfolio/portofolio15.jpg',
       livePreviewUrl: 'https://doi.org/10.52436/1.jpti.902'
      
