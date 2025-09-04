@@ -575,6 +575,14 @@ export default function App() {
       livePreviewUrl: 'https://baksopakabi.vercel.app/'
      
     },
+       { 
+      title: 'Researcher in Data Science', 
+      description: '',
+      tags: ['Python','Jupyter','Data Analysis', 'Data Visualization', ''  ],
+      image: './img/portfolio/portofolio15.jpg',
+      livePreviewUrl: 'https://doi.org/10.52436/1.jpti.902'
+     
+    },
     { 
       title: 'PT. Binco Nusantara', 
       description: '',
