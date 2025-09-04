@@ -584,6 +584,14 @@ export default function App() {
      
     },
     { 
+      title: 'Rumah Sakit Karisma Cimareme', 
+      description: '',
+      tags: ['UI/UX Design', 'React', 'Vite'],
+      image: './img/portfolio/portofolio11.png',
+      livePreviewUrl: ''
+     
+    },
+    { 
       title: 'Web Profile Program Studi Magister Pendidikan Guru Vokasi UAD', 
       description: '',
       tags: ['UI/UX Design', 'Wordpress'],
