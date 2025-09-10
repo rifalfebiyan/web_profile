@@ -762,9 +762,6 @@ export default function App() {
             <a href="#contact" className="cta-button">
               Kontak Saya <ArrowUpRight size={16} />
             </a>
-             <a href="#contact" className="cta-button">
-              Kontak Saya <Download size={16} />
-            </a>
           </div>
         </section>
 
