@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Gunakan Link, bukan tag <a> biasa
 // --- UPDATED: Using lucide-react for icons ---
 // To simplify the code, we're now using the 'lucide-react' library.
 // Make sure to add it to your project: npm install lucide-react
 import {
-    Github, Instagram, Facebook, Braces, Atom, Server, Container, Code, Figma, Cloud, Download,
+    Github, Instagram, Facebook, Braces, Atom, Server, Container, Code, Figma, Cloud,
     ArrowUpRight, Search, Menu, X, Linkedin
 } from 'lucide-react';
 
@@ -638,7 +639,6 @@ export default function App() {
 
   const certificateData = [
 
-    { title: 'Brand Identity Design', issuer: 'MySkill', category: 'UI/UX', image: './img/certified/sertifikat_21.jpg', credentialUrl: '' },
     { title: 'Copywriting AI Untuk Iklan Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_20.jpg', credentialUrl: '' },
     { title: 'Social Media Management untuk Brand Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_19.jpg', credentialUrl: '' },
     // Web Development
@@ -703,12 +703,24 @@ export default function App() {
     .filter(cert => cert.title.toLowerCase().includes(searchTerm.toLowerCase()));
     
   const navLinks = [
-      { href: "#about", text: "Tentang" },
-      { href: "#skills", text: "Keterampilan" },
-      { href: "#certificates", text: "Sertifikat" },
-      { href: "#portfolio", text: "Projek" },
-      { href: "#contact", text: "Kontak" },
+    { href: "#about", text: "Tentang" },
+    { href: "#skills", text: "Keterampilan" },
+    { href: "#certificates", text: "Sertifikat" },
+    { href: "#portfolio", text: "Projek" },
+    { href: "#contact", text: "Kontak" },
+    { to: "/space", text: "Space" }, // Diubah dari href ke to
   ];
+
+   // Fungsi untuk merender tautan, memilih antara <a> dan <Link>
+  const renderLink = (link, className, onClick = () => {}) => {
+    const key = link.text;
+    if (link.to) {
+      // Gunakan <Link> untuk navigasi internal React Router
+      return <Link to={link.to} className={className} onClick={onClick}>{link.text}</Link>;
+    }
+    // Gunakan <a> untuk tautan anchor di halaman yang sama
+    return <a href={link.href} className={className} onClick={onClick}>{link.text}</a>;
+  };
 
   return (
     <div className="App">
@@ -723,7 +735,7 @@ export default function App() {
           <a href="#" className="nav-logo">Rifal Febiyan</a>
           <ul className="nav-menu">
             {navLinks.map(link => (
-                <li key={link.href}><a href={link.href} className="nav-link">{link.text}</a></li>
+              <li key={link.text}>{renderLink(link, "nav-link")}</li>
             ))}
           </ul>
           <button className="mobile-menu-toggle" onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
@@ -761,9 +773,6 @@ export default function App() {
             <p className="hero-subtitle">Seorang Web Developer & Data Analyst yang bersemangat dalam menciptakan pengalaman digital yang modern dan fungsional.</p>
             <a href="#contact" className="cta-button">
               Kontak Saya <ArrowUpRight size={16} />
-            </a>
-             <a href="#contact" className="cta-button">
-              Kontak Saya <Download size={16} />
             </a>
           </div>
         </section>
