@@ -581,7 +581,6 @@ export default function App() {
       tags: ['Python','Jupyter','Data Analysis', 'Data Visualization', 'Association Rule','Data Mining','Machine Learning'],
       image: './img/portfolio/portofolio15.jpg',
       livePreviewUrl: 'https://doi.org/10.52436/1.jpti.902'
-     
     },
     { 
       title: 'PT. Binco Nusantara', 
@@ -637,7 +636,8 @@ export default function App() {
   ];
 
   const certificateData = [
-
+    { title: 'Data Classification and Summarization Using IBM Granite', issuer: 'IBM Skillbuild', category: 'Data Analyst', image: './img/certified/sertifikat_23.jpg', credentialUrl: 'https://www.credly.com/badges/35ba45df-cbc4-429a-bdbc-faf0b98cbbe6' },
+    { title: 'Gemini Certified Educator', issuer: 'Google', category: 'Experience', image: './img/certified/sertifikat_22.jpg', credentialUrl: 'https://edu.google.accredible.com/1dd0af0e-761a-41d0-93fe-1eba76708bef?key=8a343867d950acc2e43e115ac6b7f63a95b08ac23d01b6a0d9e8e9fd4186acd2#acc.s6YS1exu' },
     { title: 'Brand Identity Design', issuer: 'MySkill', category: 'UI/UX', image: './img/certified/sertifikat_21.jpg', credentialUrl: '' },
     { title: 'Copywriting AI Untuk Iklan Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_20.jpg', credentialUrl: '' },
     { title: 'Social Media Management untuk Brand Digital', issuer: 'Digital Talent', category: 'Digital Marketing', image: './img/certified/sertifikat_19.jpg', credentialUrl: '' },
