@@ -1,7 +1,5 @@
 import React from 'react';
-// --- UPDATED: Using lucide-react for icons ---
-// To simplify the code, we're now using the 'lucide-react' library.
-// Make sure to add it to your project: npm install lucide-react
+
 import {
     Github, Instagram, Facebook, Braces, Atom, Server, Container, Code, Figma, Cloud, Download,
     ArrowUpRight, Search, Menu, X, Linkedin
@@ -11,7 +9,7 @@ import { SiPython, SiGo, SiReact, SiFigma, SiJavascript, SiNodedotjs, SiTailwind
   SiCanva, SiAdobephotoshop, SiWhatsapp,
 } from "react-icons/si";
 
-// --- Global Styles Component (No Changes) ---
+
 const GlobalStyles = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -47,10 +45,62 @@ const GlobalStyles = () => (
     a:hover { color: var(--primary-color); }
     ul { list-style: none; }
 
+    /* --- NEW: "Wow" Section Separator Styles --- */
+    .section-separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem; /* 12px gap */
+        margin: 0 auto; /* Center it */
+        
+        /* This container is now just for layout, 
+           animations are on the children */
+    }
+
+    .separator-line {
+        width: 80px;
+        height: 2px;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 15px rgba(190, 242, 100, 0.3);
+        border-radius: 2px;
+        transform: scaleX(0);
+        opacity: 0;
+        /* Easing: ease-out-quart */
+        transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s, opacity 0.6s ease 0.4s;
+    }
+    
+    /* Set transform origin to animate outwards from center */
+    .separator-line.left { transform-origin: right; }
+    .separator-line.right { transform-origin: left; }
+
+    .separator-gem {
+        width: 12px;
+        height: 12px;
+        background-color: var(--primary-color);
+        border-radius: 3px;
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+        box-shadow: 0 0 20px rgba(190, 242, 100, 0.5);
+        /* Easing: "pop" or "overshoot" */
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s, opacity 0.4s ease 0.2s;
+    }
+
+    /* The animation trigger */
+    .animate-on-scroll.is-visible .separator-line {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    
+    .animate-on-scroll.is-visible .separator-gem {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+    }
+    
     .section-title {
       font-family: var(--font-primary);
       font-size: 2.5rem;
       font-weight: 700;
+      margin-top: 2rem; /* UPDATED: Space between separator and title */
       margin-bottom: 3rem;
       text-align: center;
       color: var(--text-color);
@@ -238,6 +288,85 @@ const GlobalStyles = () => (
         from { transform: translateX(0); }
         to { transform: translateX(-50%); }
     }
+    
+    /* --- NEW: Timeline Experience Styles --- */
+    .timeline-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-left: 2rem; /* Space for the dot */
+    }
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 10px;
+        width: 2px;
+        background-color: var(--border-color);
+        border-radius: 2px;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 2rem; /* Space from the dot to the content */
+    }
+    
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -8px; /* Centers the 18px dot on the 2px line */
+        top: 4px; /* Align with text */
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        border: 3px solid var(--background-color);
+        box-shadow: 0 0 10px rgba(190, 242, 100, 0.3); /* Match accent */
+    }
+    
+    .timeline-date {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content-card {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .timeline-content-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        border-color: rgba(190, 242, 100, 0.5);
+    }
+    .timeline-content-card h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: var(--text-color);
+    }
+    .timeline-content-card h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--primary-color); /* Use accent for the subtitle/company */
+        margin-bottom: 0.75rem;
+    }
+    .timeline-content-card p {
+        font-size: 1rem;
+        color: var(--text-secondary-color);
+        line-height: 1.6;
+    }
+    /* --- End of Timeline Styles --- */
+
 
     .projects-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
     .project-card {
@@ -517,25 +646,35 @@ const GlobalStyles = () => (
       main { padding: 0 1.5rem; }
       .navbar { padding: 1rem 1.5rem; }
       .content-section { padding: 4rem 0; }
+      
+      /* --- NEW: Timeline Mobile Styles --- */
+      .timeline-container {
+          padding-left: 1rem; /* Smaller padding on mobile */
+      }
+      .timeline-item {
+          padding-left: 1.5rem; /* Smaller padding on mobile */
+      }
+      .timeline-dot {
+          left: -9px; /* Re-center */
+      }
     }
   `}</style>
 );
 
-// --- Main App Component ---
+
 export default function App() {
   const [scrolled, setScrolled] = React.useState(false);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [activeFilter, setActiveFilter] = React.useState('All');
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  // --- Scroll listener for header style ---
+  
   React.useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // --- Intersection Observer for scroll animations ---
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -553,7 +692,7 @@ export default function App() {
     return () => elementsToAnimate.forEach(el => observer.unobserve(el));
   }, []);
   
-  // --- Effect to lock body scroll when mobile menu is open ---
+
   React.useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -691,6 +830,40 @@ export default function App() {
     { name: 'Photshop', icon: <SiAdobephotoshop/> },
 
   ];
+  
+
+  const timelineData = [
+    { 
+      date: 'Okt 2025 - Present', 
+      title: 'Full Stack Web Developer', 
+      company: 'Indismart Kreatif Solusi', 
+      description: 'On Progress' 
+    },
+    { 
+      date: 'Jul 2025 - Okt 2023', 
+      title: 'Software Engineer', 
+      company: 'Academy Capital Energy', 
+      description: 'Developed a web-based application for verifying the authenticity of training certificates using a MySQL database and PHP. Designed a training registration catalog management system and admin dashboard to help the team efficiently manage training programs, increasing operational performance by up to 40%.' 
+    },
+     { 
+      date: 'Jul 2025 - Okt 2025', 
+      title: 'Digital Marketing', 
+      company: 'Academy Capital Energy', 
+      description: 'Managed the company website with SEO optimization to improve visibility and ranking on search engines. Managed social media platforms and designed content direction to strengthen the company’s branding and increase audience engagement.' 
+    },
+     { 
+      date: 'Jul 2024 - Aug 2025', 
+      title: 'Web Developer', 
+      company: 'Universitas Ahmad Dahlan', 
+      description: 'Managed the program website: refreshed layouts, published news/announcements, and added features that support  student administration. Managed social media with 125+ posts, strengthening branding and growing followers by 34%, while supporting office administration needs.' 
+    },
+    // { 
+    //   date: 'Ags - Nov 2022', 
+    //   title: 'Web Developer Intern', 
+    //   company: 'DISKOMINFO DIY', 
+    //   description: 'Berkontribusi dalam pengembangan aplikasi E-GuestBook, mengelola data, dan mendukung digitalisasi layanan publik di Dinas Komunikasi dan Informatika DIY.' 
+    // },
+  ];
 
   
   const skillsTrack1 = [...skillsData, ...skillsData];
@@ -702,9 +875,11 @@ export default function App() {
     .filter(cert => activeFilter === 'All' || cert.category === activeFilter)
     .filter(cert => cert.title.toLowerCase().includes(searchTerm.toLowerCase()));
     
+ 
   const navLinks = [
       { href: "#about", text: "Tentang" },
       { href: "#skills", text: "Keterampilan" },
+      { href: "#experience", text: "Pengalaman" },
       { href: "#certificates", text: "Sertifikat" },
       { href: "#portfolio", text: "Projek" },
       { href: "#contact", text: "Kontak" },
@@ -766,7 +941,15 @@ export default function App() {
         </section>
 
         <section id="about" className="content-section">
-          <h2 className="section-title animate-on-scroll fade-in-up">Tentang Saya</h2>
+          {/* UPDATED: Wrapper for separator and title animation */}
+          <div className="animate-on-scroll fade-in-up">
+            <div className="section-separator">
+              <div className="separator-line left"></div>
+              <div className="separator-gem"></div>
+              <div className="separator-line right"></div>
+            </div>
+            <h2 className="section-title">Tentang Saya</h2>
+          </div>
           <div className="about-container animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>
             <p>
               Lulusan Program Studi Informatika yang bercita-cita tinggi dan antusias terhadap perkembangan teknologi digital. 
@@ -780,7 +963,15 @@ export default function App() {
         </section>
         
         <section id="skills" className="content-section">
-            <h2 className="section-title animate-on-scroll fade-in-up">Keterampilan Saya</h2>
+            {/* UPDATED: Wrapper for separator and title animation */}
+            <div className="animate-on-scroll fade-in-up">
+              <div className="section-separator">
+                <div className="separator-line left"></div>
+                <div className="separator-gem"></div>
+                <div className="separator-line right"></div>
+              </div>
+              <h2 className="section-title">Keterampilan Saya</h2>
+            </div>
             <div className="skills-scroller animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>
                 <div className="skills-track">
                     {skillsTrack1.map((skill, index) => (
@@ -801,8 +992,44 @@ export default function App() {
             </div>
         </section>
 
+        {/* --- NEW: Timeline Experience Section --- */}
+        <section id="experience" className="content-section">
+          {/* UPDATED: Wrapper for separator and title animation */}
+          <div className="animate-on-scroll fade-in-up">
+            <div className="section-separator">
+              <div className="separator-line left"></div>
+              <div className="separator-gem"></div>
+              <div className="separator-line right"></div>
+            </div>
+            <h2 className="section-title">Timeline Pengalaman</h2>
+          </div>
+          <div className="timeline-container animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>
+            {timelineData.map((item, index) => (
+              <div className="timeline-item" key={index}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-date">{item.date}</div>
+                <div className="timeline-content-card">
+                  <h3>{item.title}</h3>
+                  <h4>{item.company}</h4>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* --- End of New Section --- */}
+
+
         <section id="certificates" className="content-section">
-          <h2 className="section-title">Sertifikat & Lisensi</h2>
+          {/* UPDATED: Wrapper for separator and title animation */}
+          <div className="animate-on-scroll fade-in-up">
+            <div className="section-separator">
+              <div className="separator-line left"></div>
+              <div className="separator-gem"></div>
+              <div className="separator-line right"></div>
+            </div>
+            <h2 className="section-title">Sertifikat & Lisensi</h2>
+          </div>
           <div className="filter-controls">
             <div className="search-container">
               <span className="search-icon"><Search size={16} /></span>
@@ -840,7 +1067,15 @@ export default function App() {
         </section>
 
         <section id="portfolio" className="content-section">
-          <h2 className="section-title animate-on-scroll fade-in-up">Rekam Jejak</h2>
+          {/* UPDATED: Wrapper for separator and title animation */}
+          <div className="animate-on-scroll fade-in-up">
+            <div className="section-separator">
+              <div className="separator-line left"></div>
+              <div className="separator-gem"></div>
+              <div className="separator-line right"></div>
+            </div>
+            <h2 className="section-title">Rekam Jejak</h2>
+          </div>
           <div className="projects-grid">
             {projectData.map((item, index) => (
               <div key={index} className="project-card animate-on-scroll fade-in-up" style={{transitionDelay: `${index * 150}ms`}}>
@@ -863,7 +1098,15 @@ export default function App() {
           {/* Footer */}
         <section id="contact" className="content-section">
           <div className="contact-container">
-            <h2 className="section-title animate-on-scroll fade-in-up">Hubungi Saya</h2>
+            {/* UPDATED: Wrapper for separator and title animation */}
+            <div className="animate-on-scroll fade-in-up">
+              <div className="section-separator">
+                <div className="separator-line left"></div>
+                <div className="separator-gem"></div>
+                <div className="separator-line right"></div>
+              </div>
+              <h2 className="section-title">Hubungi Saya</h2>
+            </div>
             <p className="animate-on-scroll fade-in-up" style={{transitionDelay: '200ms'}}>Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya melalui media sosial.</p>
             <div className="social-links animate-on-scroll fade-in-up" style={{transitionDelay: '400ms'}}>
               <a href="https://github.com/rifalfebiyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={24} /></a>
@@ -882,3 +1125,5 @@ export default function App() {
     </div>
   );
 }
+
+
